@@ -36,7 +36,7 @@ if (!isGeminiKeyMissing) {
     try {
         genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
         // Use a specific model name that supports the features you need
-        geminiModel = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" }); // Updated Model Example
+        geminiModel = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" }); 
     } catch (error) {
         console.error("Error initializing Gemini SDK:", error);
     }
@@ -44,7 +44,7 @@ if (!isGeminiKeyMissing) {
     console.warn("Gemini API Key not provided or invalid.");
 }
 
-const GROQ_MODEL = 'meta-llama/llama-4-scout-17b-16e-instruct'; // Updated Groq Model Example
+const GROQ_MODEL = 'openai/gpt-oss-20b'; // Updated Groq Model Example
 
 // --- System Prompts ---
 const MINDMAP_SYSTEM_PROMPT = `
